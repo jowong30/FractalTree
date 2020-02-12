@@ -2,6 +2,7 @@ private double fractionLength = .8;
 private int smallestBranch = 10; 
 private double branchAngle = .2;  
 
+
 public void setup() 
 {   
 	size(1200,700);    
@@ -9,20 +10,37 @@ public void setup()
 } 
 public void draw() 
 {   
+
 	//background(242 ,72,15); 
-	background(0,0,0);
+	//background(0);
+	for(int i=0; i>500;i++){
+		noStroke();
+		fill(255-i,200-i,10);
+		rect(0,200,1300-(i*3),700);
+	}
 
-
-	noStroke();
-	fill(242 ,72,15 ,100);
-	ellipseMode(CENTER);
-	ellipse(600,550,600,300);
+	pond(600,550,600,300);
+	
 	
 
 	drawBranches(600,350,75,3*Math.PI/2);  //will add later 
 
 	
 } 
+
+public void pond(int x,int y,int xx,int yy){
+	for(int i=0; i<300; i++){
+		
+
+
+
+
+		noStroke();
+		fill(i+150 ,0 + (i/3),15 ,100);
+		ellipseMode(CENTER);
+		ellipse(600+i/2,550,600-i,300-i);
+	}
+}
 public void drawBranches(int x,int y, double branchLength, double angle) 
 {   
 	double angle1 = angle + branchAngle;
