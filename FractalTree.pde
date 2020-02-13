@@ -10,28 +10,43 @@ public void setup()
 } 
 public void draw() 
 {   
-
+	translate(0, 150);
 	//background(242 ,72,15); 
-	//background(0);
-	for(int i=0; i>500;i++){
-		noStroke();
-		fill(255-i,200-i,10);
-		rect(0,200,1300-(i*3),700);
-	}
-
+	background(0);
+	
 	pond(600,550,600,300);
 	
+	for(int i=0; i<300;i++){
+		noStroke();
+		fill(600-i*2,400-i*2,10 , i);
+		rect(-200,200,1500-(i*3),700);
+	}
+
+	rotate(PI/6);
+	translate(100,-300);
+	for(int i=0; i<300;i++){
+		noStroke();
+		fill(242 ,72,15, i);
+		rect(-200,-200,1500,600- (i*7));
+	}
+
+	translate(-100, 300);
+	rotate(-PI/6);
+
 	
 
-	drawBranches(600,350,75,3*Math.PI/2);  //will add later 
+	drawBranches(600,500,150,3*Math.PI/2);  
 
+	
 	
 } 
 
 public void pond(int x,int y,int xx,int yy){
+	
+		
 	for(int i=0; i<300; i++){
 		
-
+		
 
 
 
